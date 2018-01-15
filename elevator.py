@@ -22,7 +22,7 @@ def calculate_actions():
              }
 
 #elevator is set up with some initials and now takes args from console
-try: elevator['floor_count']=int(sys.argv[1])
+try: elevator['floor_count']=min(max(int(sys.argv[1]), 5), 20)
 except BaseException: pass
 try: elevator['floor_height']=float(sys.argv[2])
 except BaseException: pass
